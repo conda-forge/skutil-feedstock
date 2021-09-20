@@ -1,5 +1,5 @@
 {% set name = "skutil" %}
-{% set version = "0.0.17" %}
+{% set version = "0.0.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ce5413f254e14516c59aab1a701e73b02ff9cd31b2af7ab059cdeaaf02781a47
+  sha256: 22e7ebd00dae483e371bc1723c70e4e90b7147d2ce68d920a3a60be05379216b
 
 build:
   noarch: python
