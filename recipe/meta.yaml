@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 22e7ebd00dae483e371bc1723c70e4e90b7147d2ce68d920a3a60be05379216b
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - decore
     - numpy >=1.13.3
     - scipy >=0.19.1
@@ -28,6 +28,8 @@ requirements:
     - scikit-learn
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - skutil
 
