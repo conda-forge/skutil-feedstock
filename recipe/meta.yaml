@@ -1,5 +1,5 @@
 {% set name = "skutil" %}
-{% set version = "0.0.18" %}
+{% set version = "0.0.19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 22e7ebd00dae483e371bc1723c70e4e90b7147d2ce68d920a3a60be05379216b
+  sha256: 4d99a6bae7c7e29dbad5347e60c5fde7356a35cc80a1024b987ab514da853c5b
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
